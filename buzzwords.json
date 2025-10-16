@@ -1,0 +1,121 @@
+{
+  "buzzwords": {
+    "brat": {
+      "headword": "brat",
+      "language": "English | 英语",
+      "partOfSpeech": "noun | 名词",
+      "pronunciation": "英 /brat/ 美 /bræt/",
+      "firstRecorded": "Old English (before 1150) 古英语时期 (公元1150年前)",
+      "trendingPeriod": "2024",
+      "numberOfSenses": 7,
+      "trendingSense": "自信独立者 | Confident, Independent Person or Attitude",
+      "examples": [
+        "She's such a brat summer vibes person.",
+        "Living my brat life unapologetically."
+      ],
+      "etymology": "Originally meaning a badly behaved child, recently reclaimed to represent confident, unapologetic attitude popularized by Charli XCX's album 'Brat'.",
+      "frequencyData": [
+        {"year": 2020, "count": 150},
+        {"year": 2021, "count": 300},
+        {"year": 2022, "count": 800},
+        {"year": 2023, "count": 2500},
+        {"year": 2024, "count": 15000}
+      ],
+      "history": "The term 'brat' has undergone a significant semantic shift in 2024. Originally a negative term for a spoiled child, it was reclaimed by pop culture, particularly through Charli XCX's album 'Brat', to represent confidence, authenticity, and unapologetic self-expression. The 'brat summer' phenomenon became a global cultural movement celebrating messy, authentic living.",
+      "source": "《2024年全球流行语报告》",
+      "thesaurus": [
+        {"leftContext": "She's living her", "word": "brat", "rightContext": "summer lifestyle", "link": "#brat-summer"},
+        {"leftContext": "That's so", "word": "brat", "rightContext": "of you to say", "link": "#brat-attitude"},
+        {"leftContext": "Embrace your inner", "word": "brat", "rightContext": "energy", "link": "#brat-energy"}
+      ]
+    },
+    "yyds": {
+      "headword": "YYDS",
+      "language": "Chinese | 中文",
+      "partOfSpeech": "abbreviation | 缩写",
+      "pronunciation": "yǒng yuǎn de shén",
+      "firstRecorded": "2020年电竞直播",
+      "trendingPeriod": "2021-2022",
+      "numberOfSenses": 2,
+      "trendingSense": "永远的神 | Forever the GOAT",
+      "examples": [
+        "这个操作YYDS！",
+        "王者荣耀YYDS！"
+      ],
+      "etymology": "网络流行语，源于电竞解说，表示对某人或某事物的极度赞美",
+      "frequencyData": [
+        {"year": 2020, "count": 1000},
+        {"year": 2021, "count": 50000},
+        {"year": 2022, "count": 30000},
+        {"year": 2023, "count": 15000},
+        {"year": 2024, "count": 8000}
+      ],
+      "history": "YYDS最初出现在电竞直播间，由游戏解说员用来形容选手的精彩操作。随后迅速传播到各大社交平台，成为表达赞美和崇拜的万能用语。",
+      "source": "《中国网络流行语发展报告2021》",
+      "thesaurus": [
+        {"leftContext": "这波操作", "word": "YYDS", "rightContext": "！", "link": "#gaming"},
+        {"leftContext": "我的偶像", "word": "YYDS", "rightContext": "💪", "link": "#idol"},
+        {"leftContext": "今天的表现", "word": "YYDS", "rightContext": "👍", "link": "#performance"}
+      ]
+    },
+    "躺平": {
+      "headword": "躺平",
+      "language": "Chinese | 中文",
+      "partOfSpeech": "verb/lifestyle | 动词/生活方式",
+      "pronunciation": "tǎng píng",
+      "firstRecorded": "2021年网络论坛",
+      "trendingPeriod": "2021-2023",
+      "numberOfSenses": 3,
+      "trendingSense": "低欲望生活态度 | Low-desire lifestyle attitude",
+      "examples": [
+        "我选择躺平，不再内卷。",
+        "躺平是一种生活智慧。"
+      ],
+      "etymology": "表示不再奋斗，以最低标准生活的消极态度，反映年轻人面对竞争压力的一种回应",
+      "frequencyData": [
+        {"year": 2020, "count": 50},
+        {"year": 2021, "count": 25000},
+        {"year": 2022, "count": 18000},
+        {"year": 2023, "count": 12000},
+        {"year": 2024, "count": 8000}
+      ],
+      "history": "躺平一词最初出现在网络论坛，表达年轻人对激烈竞争和高压生活的消极抵抗。这一概念迅速引发社会讨论，成为反思现代生活方式的重要话题。",
+      "source": "《中国社会心理学研究报告2022》",
+      "thesaurus": [
+        {"leftContext": "选择", "word": "躺平", "rightContext": "过简单生活", "link": "#simple-life"},
+        {"leftContext": "不想", "word": "躺平", "rightContext": "了", "link": "#giving-up"},
+        {"leftContext": "年轻人开始", "word": "躺平", "rightContext": "现象", "link": "#youth-culture"}
+      ]
+    },
+    "内卷": {
+      "headword": "内卷",
+      "language": "Chinese | 中文",
+      "partOfSpeech": "noun/verb | 名词/动词",
+      "pronunciation": "nèi juǎn",
+      "firstRecorded": "学术术语，2020年网络流行",
+      "trendingPeriod": "2020-2022",
+      "numberOfSenses": 2,
+      "trendingSense": "过度竞争 | Excessive competition",
+      "examples": [
+        "职场内卷太严重了。",
+        "教育内卷让孩子压力很大。"
+      ],
+      "etymology": "原为人类学术语，指社会发展陷入停滞状态，网络流行后多指过度竞争和恶性竞争",
+      "frequencyData": [
+        {"year": 2019, "count": 100},
+        {"year": 2020, "count": 8000},
+        {"year": 2021, "count": 35000},
+        {"year": 2022, "count": 28000},
+        {"year": 2023, "count": 20000},
+        {"year": 2024, "count": 15000}
+      ],
+      "history": "内卷原本是人类学概念，描述社会停滞现象。在网络传播中，逐渐演变为形容过度竞争、恶性竞争的流行语，反映了现代社会竞争压力。",
+      "source": "《网络流行语社会学分析2021》",
+      "thesaurus": [
+        {"leftContext": "职场", "word": "内卷", "rightContext": "现象严重", "link": "#workplace"},
+        {"leftContext": "教育", "word": "内卷", "rightContext": "问题", "link": "#education"},
+        {"leftContext": "避免", "word": "内卷", "rightContext": "竞争", "link": "#competition"}
+      ]
+    }
+  }
+}

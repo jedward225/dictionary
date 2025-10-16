@@ -3,105 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>单词详情</title>
+    <title>流行语词典 - 词条详情</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0d1a2e;
-            color: #ffffff;
-        }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="flex items-center justify-center min-h-screen p-8">
-
-    <div class="w-full max-w-3xl bg-white/5 p-8 rounded-xl shadow-2xl border border-white/10">
-        <div id="word-details">
-            <h1 class="text-5xl font-bold capitalize" id="term">加载中...</h1>
-            <p class="text-xl text-cyan-300 mt-2" id="pronunciation"></p>
-            <div class="h-px bg-white/20 my-6"></div>
-            <!-- 用于显示多个释义的容器 -->
-            <div id="definitions-container" class="space-y-4">
-                <p class="text-lg leading-relaxed" id="definition-placeholder">正在从网络词典中检索释义...</p>
+<body class="min-h-screen p-4">
+    <div class="max-w-6xl mx-auto">
+        <!-- 页面头部 -->
+        <header class="mb-8">
+            <div class="flex items-center justify-between">
+                <h1 class="text-4xl font-bold" id="page-title">流行语词典</h1>
+                <a href="index.html" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                    &larr; 返回主页
+                </a>
             </div>
-        </div>
-        <div class="mt-8">
-            <a href="index.html" class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">
-                &larr; 返回主页
-            </a>
-        </div>
+            <div class="mt-4">
+                <h2 class="text-6xl font-bold capitalize text-cyan-300" id="headword">加载中...</h2>
+                <p class="text-xl text-gray-300 mt-2" id="pronunciation"></p>
+            </div>
+        </header>
+
+        <!-- 标签页导航 -->
+        <nav class="mb-8">
+            <div class="flex flex-wrap gap-2">
+                <button class="tab-button active px-6 py-3 rounded-lg bg-gray-700 hover:bg-gray-600 transition-colors" data-tab="info">
+                    流行语档案 Info Sheet
+                </button>
+                <button class="tab-button px-6 py-3 rounded-lg bg-gray-700 hover:bg-gray-600 transition-colors" data-tab="definition">
+                    定义 Definition
+                </button>
+                <button class="tab-button px-6 py-3 rounded-lg bg-gray-700 hover:bg-gray-600 transition-colors" data-tab="frequency">
+                    词频 Frequency
+                </button>
+                <button class="tab-button px-6 py-3 rounded-lg bg-gray-700 hover:bg-gray-600 transition-colors" data-tab="history">
+                    演化历史 History
+                </button>
+                <button class="tab-button px-6 py-3 rounded-lg bg-gray-700 hover:bg-gray-600 transition-colors" data-tab="thesaurus">
+                    相关词汇 Thesaurus
+                </button>
+            </div>
+        </nav>
+
+        <!-- 标签页内容 -->
+        <main class="bg-white/5 p-8 rounded-xl shadow-2xl border border-white/10">
+            <!-- 流行语档案 -->
+            <div id="info" class="tab-content active">
+                <h3 class="text-2xl font-bold mb-6 text-cyan-400">流行语档案 | Info Sheet</h3>
+                <table class="info-table">
+                    <tr>
+                        <td>Headword | 词目</td>
+                        <td id="info-headword">-</td>
+                    </tr>
+                    <tr>
+                        <td>Language | 来源语言</td>
+                        <td id="info-language">-</td>
+                    </tr>
+                    <tr>
+                        <td>Part of Speech | 词类</td>
+                        <td id="info-pos">-</td>
+                    </tr>
+                    <tr>
+                        <td>Pronunciation | 发音</td>
+                        <td id="info-pronunciation">-</td>
+                    </tr>
+                    <tr>
+                        <td>First Recorded | 首次记录时间</td>
+                        <td id="info-first-recorded">-</td>
+                    </tr>
+                    <tr>
+                        <td>Trending Period | 流行时间</td>
+                        <td id="info-trending">-</td>
+                    </tr>
+                    <tr>
+                        <td>义项数量 Number of Senses</td>
+                        <td id="info-senses">-</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- 定义 -->
+            <div id="definition" class="tab-content">
+                <h3 class="text-2xl font-bold mb-6 text-cyan-400">定义 | Definition</h3>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-xl font-semibold text-yellow-400 mb-3">流行义 | Trending Sense</h4>
+                        <p class="text-lg leading-relaxed mb-4" id="trending-sense">-</p>
+
+                        <h5 class="text-lg font-semibold text-green-400 mb-2">Examples 例句</h5>
+                        <ul class="list-disc list-inside space-y-2 pl-4" id="examples-list">
+                        </ul>
+
+                        <h5 class="text-lg font-semibold text-purple-400 mb-2 mt-4">Etymology | 词源</h5>
+                        <p class="text-gray-300 leading-relaxed" id="etymology">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 词频 -->
+            <div id="frequency" class="tab-content">
+                <h3 class="text-2xl font-bold mb-6 text-cyan-400">词频 | Frequency</h3>
+                <div class="bg-white/10 p-6 rounded-lg">
+                    <canvas id="frequency-chart" width="400" height="200"></canvas>
+                </div>
+            </div>
+
+            <!-- 演化历史 -->
+            <div id="history" class="tab-content">
+                <h3 class="text-2xl font-bold mb-6 text-cyan-400">演化历史 | History</h3>
+                <div class="prose prose-invert max-w-none">
+                    <p class="text-lg leading-relaxed mb-6" id="history-content">-</p>
+                    <div class="mt-6 p-4 bg-blue-900/30 rounded-lg">
+                        <p class="text-sm text-blue-300">
+                            信息来源：<span id="history-source">-</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 相关词汇 -->
+            <div id="thesaurus" class="tab-content">
+                <h3 class="text-2xl font-bold mb-6 text-cyan-400">相关词汇 | Thesaurus</h3>
+                <div class="space-y-4" id="thesaurus-content">
+                    <p class="text-gray-400">加载中...</p>
+                </div>
+            </div>
+        </main>
     </div>
 
+    <script src="js/word.js"></script>
+    <script src="js/charts.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', async () => {
-            const params = new URLSearchParams(window.location.search);
-            const term = params.get('term');
-
-            const termEl = document.getElementById('term');
-            const pronunciationEl = document.getElementById('pronunciation');
-            const definitionsContainer = document.getElementById('definitions-container');
-            const placeholder = document.getElementById('definition-placeholder');
-
-            if (term) {
-                termEl.textContent = term;
-                try {
-                    // 使用 fetch 函数调用免费的词典API
-                    const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${term}`);
-                    
-                    if (!response.ok) {
-                        // 如果API返回错误 (例如 404 Not Found)
-                        throw new Error('Word not found in the dictionary.');
-                    }
-
-                    const data = await response.json();
-                    
-                    // --- 数据处理和显示 ---
-                    const wordData = data[0]; // 通常API会返回一个数组，我们取第一个结果
-                    
-                    // 查找并显示音标
-                    const phonetic = wordData.phonetics.find(p => p.text)?.text;
-                    pronunciationEl.textContent = phonetic || '音标未提供';
-
-                    // 清空占位符
-                    definitionsContainer.innerHTML = ''; 
-
-                    // 遍历并显示所有词性和释义
-                    wordData.meanings.forEach(meaning => {
-                        const partOfSpeech = meaning.partOfSpeech;
-                        
-                        const typeEl = document.createElement('h3');
-                        typeEl.className = 'text-2xl font-semibold text-cyan-400 capitalize';
-                        typeEl.textContent = partOfSpeech;
-                        definitionsContainer.appendChild(typeEl);
-
-                        const listEl = document.createElement('ul');
-                        listEl.className = 'list-disc list-inside space-y-2 pl-2 mt-2';
-                        
-                        meaning.definitions.forEach(def => {
-                            const listItem = document.createElement('li');
-                            listItem.className = 'text-lg leading-relaxed';
-                            listItem.textContent = def.definition;
-                            listEl.appendChild(listItem);
-                        });
-
-                        definitionsContainer.appendChild(listEl);
-                    });
-
-                } catch (error) {
-                    // 捕获到错误（网络问题或单词未找到）
-                    pronunciationEl.textContent = '404';
-                    placeholder.textContent = '抱歉，我们在网络词典中没有找到这个单词。';
-                    definitionsContainer.innerHTML = '';
-                    definitionsContainer.appendChild(placeholder);
-                }
-            } else {
-                termEl.textContent = '未找到单词';
-                pronunciationEl.textContent = '';
-                placeholder.textContent = '没有提供需要查询的单词。请返回主页重试。';
+        // 扩展 BuzzwordDisplay 类以使用独立的图表功能
+        BuzzwordDisplay.prototype.createFrequencyChart = function(frequencyData) {
+            if (typeof window.createFrequencyChart === 'function') {
+                window.createFrequencyChart(frequencyData);
             }
-        });
+        };
     </script>
-
 </body>
 </html>
-
