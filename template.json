@@ -1,0 +1,231 @@
+{
+  "buzzwords": {
+    "brat": {
+      "headword": "brat",
+      "language": {
+        "en": "English",
+        "zh": "英语"
+      },
+      "partOfSpeech": {
+        "en": "noun",
+        "zh": "名词"
+      },
+      "pronunciation": {
+        "uk": "/brat/",
+        "us": "/bræt/",
+        "audio": {
+          "uk": "assets/audio/brat-uk.mp3",
+          "us": "assets/audio/brat-us.mp3"
+        }
+      },
+      "firstRecorded": {
+        "en": "Old English (before 1150)",
+        "zh": "古英语时期（公元1150年前）"
+      },
+      "trendingPeriod": "2024",
+      "numberOfSenses": 7,
+      "senses": [
+        {
+          "type": "trending",
+          "title": {
+            "en": "Trending Sense",
+            "zh": "流行义"
+          },
+          "label": {
+            "en": "Confident, Independent Person or Attitude",
+            "zh": "自信独立者"
+          },
+          "definition": {
+            "en": "A confident, independent, and unapologetic person or attitude; a \"brat\" aesthetic representing freedom, authenticity, and rebellion.",
+            "zh": "指一种自信、独立、无拘无束的个体或态度；体现\"brat风格\"所代表的自由、真实与反叛精神。"
+          },
+          "examples": [
+            {
+              "year": 2024,
+              "sentence": {
+                "en": "To be a brat is to be confident and unapologetic, yes, but it also means allowing yourself to be vulnerable, to feel all your feelings and express them in ways that can be messy, vulnerable, bratty.",
+                "zh": "\"做一个 brat\"意味着要自信且毫不道歉，但同时也意味着允许自己脆弱，去真实地感受并表达情绪——哪怕这种表达是混乱的、敏感的、带点\"brat\"意味的。"
+              },
+              "source": {
+                "author": "Gwen Tam",
+                "title": "BRAT: a shiny, lime green breakdown",
+                "url": "https://berkeleybside.com/brat-a-shiny-lime-green-breakdown/"
+              },
+              "keyword": "brat",
+              "keywordPosition": {
+                "start": 5,
+                "end": 9
+              }
+            }
+          ],
+          "etymology": null
+        },
+        {
+          "type": "common",
+          "title": {
+            "en": "Common Modern Sense",
+            "zh": "现代主流义"
+          },
+          "subsenses": [
+            {
+              "label": {
+                "en": "Spoiled or Mischievous Child",
+                "zh": "被宠坏的孩子"
+              },
+              "definition": {
+                "en": "(Usually derogatory) A child, especially one who is ill-mannered, annoying, or spoiled.",
+                "zh": "（常作贬义）指无礼、顽皮或被宠坏的孩子。"
+              },
+              "examples": [
+                {
+                  "year": 2021,
+                  "sentence": {
+                    "en": "Just because they aren't behaving like unruly brats in the grocery store...doesn't mean they are scared.",
+                    "zh": "他们在超市里没有像顽劣小孩那样胡闹，并不意味着他们感到害怕。"
+                  },
+                  "source": {
+                    "author": "Amish Hackers",
+                    "title": "The Technium",
+                    "url": "https://kk.org/thetechnium/amish-hackers-a/"
+                  },
+                  "keyword": "brats",
+                  "keywordPosition": {
+                    "start": 43,
+                    "end": 48
+                  }
+                },
+                {
+                  "year": 2020,
+                  "sentence": {
+                    "en": "Cartoonist Damien Glez from Burkina Faso sees the president as a little brat who wants to get his way, no matter the cost.",
+                    "zh": "来自布基纳法索的漫画家达米安·格莱兹（Damien Glez）认为，这位总统就像个任性的小孩，无论代价多大都要按自己的意愿行事。"
+                  },
+                  "source": {
+                    "author": "Ines Pohl",
+                    "title": "Florida woman wants 4 more years of Trump",
+                    "url": "https://www.dw.com/en/a-florida-latina-wants-to-give-donald-trump-4-more-years/a-55378721"
+                  },
+                  "keyword": "brat",
+                  "keywordPosition": {
+                    "start": 72,
+                    "end": 76
+                  }
+                }
+              ]
+            },
+            {
+              "label": {
+                "en": "Child of a Person in a Specific Profession",
+                "zh": "某特定职业家庭的子女"
+              },
+              "definition": {
+                "en": "(By extension) The child of a person in a specific and often mobile profession (e.g. army brat, Hollywood brat).",
+                "zh": "（引申义）指特定职业家庭的子女，尤其是流动性较大的职业，如\"军人子弟\"（army brat）或\"明星子女\"（Hollywood brat）。"
+              },
+              "examples": []
+            }
+          ],
+          "etymology": {
+            "en": "The origin of brat (Modern Common Sense) is uncertain. Nineteenth-century etymologists Wedgwood, E. Müller, and Skeat suggested that it might originally meant a coarse garment or rag. However, editors of the Oxford English Dictionary note that no historical evidence has been found to confirm a semantic transition from \"cloth\" to \"child.\"",
+            "zh": "brat（现代主流义）词源不确定。十九世纪语言学家 Wedgwood、E. Müller 与Skeat 认为该词义可能源自\"衣物\"义。但《牛津英语词典》指出，目前尚无确切证据表明该词经历了由\"衣物\"义向\"孩子\"义的语义演变。"
+          }
+        },
+        {
+          "type": "other",
+          "title": {
+            "en": "Other Senses",
+            "zh": "其他义"
+          },
+          "subsenses": [
+            {
+              "label": {
+                "en": "Coarse Garment or Rag (Obsolete)",
+                "zh": "粗布织物（已废弃）"
+              },
+              "definition": {
+                "en": "Originally, brat meant a cloth or outer garment, especially one made of coarse or makeshift material; later used for \"apron\", \"pinafore,\" or contemptuously for \"rag.\"",
+                "zh": "最初，brat 指一种粗布制成的外衣或披巾；后来在方言中也用作\"围裙、罩衫\"，或轻蔑地指\"破布\"。"
+              },
+              "examples": [
+                {
+                  "year": 1962,
+                  "sentence": {
+                    "en": "I had put on the chequered overall known locally as a \"brat.\"",
+                    "zh": "我穿上了那件当地人称作\"brat\"的格子罩衫。"
+                  },
+                  "source": {
+                    "author": "John Boynton Priestley",
+                    "title": "Margin Released. A writer's reminiscences and reflections",
+                    "url": ""
+                  },
+                  "keyword": "brat",
+                  "keywordPosition": {
+                    "start": 49,
+                    "end": 53
+                  }
+                }
+              ],
+              "etymology": {
+                "en": "Of Celtic origin. Old English (Northumbrian) bratt was probably borrowed from Old Irish brat(t), meaning \"cloth\" or \"mantle.\"",
+                "zh": "源自凯尔特语。古英语（诺森布里亚方言）bratt 可能借自古爱尔兰语的brat(t)，意为\"布料\"或\"披巾\"。"
+              }
+            },
+            {
+              "label": {
+                "en": "A Fish",
+                "zh": "一种鱼类"
+              },
+              "definition": {
+                "en": "A fish: the turbot, birt, or bret.",
+                "zh": "指多宝鱼、鲽鱼或鲆鱼。"
+              },
+              "examples": []
+            },
+            {
+              "label": {
+                "en": "Thin Bed of Coal (Mining Term)",
+                "zh": "薄煤层（采矿术语）"
+              },
+              "definition": {
+                "en": "A thin bed of coal mixed with pyrites or carbonate of lime.",
+                "zh": "采矿术语，指含黄铁矿或碳酸钙的薄煤层。"
+              },
+              "examples": []
+            },
+            {
+              "label": {
+                "en": "German Sausage (U.S. Regional)",
+                "zh": "德式香肠（美国方言）"
+              },
+              "definition": {
+                "en": "Short for bratwurst; a German-style sausage, especially common in the U.S. Midwest.",
+                "zh": "bratwurst 的缩略形式，指德式香肠，在美国中西部方言中尤为常见。"
+              },
+              "examples": []
+            }
+          ]
+        }
+      ],
+      "frequencyData": [
+        {"year": 2020, "count": 150},
+        {"year": 2021, "count": 300},
+        {"year": 2022, "count": 800},
+        {"year": 2023, "count": 2500},
+        {"year": 2024, "count": 15000}
+      ],
+      "history": {
+        "en": "The term 'brat' has undergone a significant semantic shift in 2024. Originally a negative term for a spoiled child, it was reclaimed by pop culture, particularly through Charli XCX's album 'Brat', to represent confidence, authenticity, and unapologetic self-expression. The 'brat summer' phenomenon became a global cultural movement celebrating messy, authentic living.",
+        "zh": "\"brat\"一词在2024年经历了显著的语义转变。原本是指被宠坏的孩子的贬义词，在流行文化中被重新定义，特别是通过Charli XCX的专辑《Brat》，代表自信、真实和毫不掩饰的自我表达。\"brat summer\"现象成为全球文化运动，庆祝混乱而真实的生活方式。"
+      },
+      "source": {
+        "en": "Global Buzzwords Report 2024",
+        "zh": "《2024年全球流行语报告》"
+      },
+      "relatedTerms": ["aesthetic", "confidence", "authenticity", "rebellion"]
+    },
+    {
+        # "TODO"
+        
+    }
+   }
+}

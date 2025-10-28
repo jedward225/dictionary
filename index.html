@@ -14,8 +14,8 @@
 
     <!-- 页面内容 -->
     <div class="content-overlay">
-        <header class="absolute top-8 left-8 text-white">
-            <h1 class="text-2xl font-bold tracking-wider">OXFORD</h1>
+        <header class="absolute top-6 left-6 z-10">
+            <img src="assets/images/BRAIN-logo.png" alt="BRAIN Logo" class="brain-logo h-16 md:h-20">
         </header>
 
         <main class="w-full max-w-2xl text-center">
@@ -39,6 +39,27 @@
         <!-- 错误提示弹窗 -->
         <div id="error-popup" class="error-popup hidden fixed top-10 right-10 bg-red-500 text-white p-4 rounded-lg shadow-xl opacity-0">
             <p><strong class="font-bold">检索失败!</strong> 未在词典中找到该单词。</p>
+        </div>
+
+        <!-- 友情链接区域 -->
+        <div class="footer-links">
+            <div class="links-container">
+                <h3 class="text-center text-lg font-semibold mb-4 text-white/80">友情链接</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-4">
+                    <!-- 示例链接，可以根据需要添加实际的友情链接 -->
+                    <a href="https://www.ruc.edu.cn" target="_blank" class="link-item">
+                        <div class="link-logo bg-white/10 rounded-lg p-2 w-full flex items-center justify-center" style="height: 64px;">
+                            <span class="text-white text-sm">中国人民大学</span>
+                        </div>
+                    </a>
+                    <!-- 可以继续添加更多链接 -->
+                </div>
+
+                <!-- 版权信息 -->
+                <div class="copyright">
+                    中国人民大学国家治理大数据和人工智能创新平台 版权所有
+                </div>
+            </div>
         </div>
     </div>
 

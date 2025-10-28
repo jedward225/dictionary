@@ -2,18 +2,210 @@
   "buzzwords": {
     "brat": {
       "headword": "brat",
-      "language": "English | 英语",
-      "partOfSpeech": "noun | 名词",
-      "pronunciation": "英 /brat/ 美 /bræt/",
-      "firstRecorded": "Old English (before 1150) 古英语时期 (公元1150年前)",
+      "language": {
+        "en": "English",
+        "zh": "英语"
+      },
+      "partOfSpeech": {
+        "en": "noun",
+        "zh": "名词"
+      },
+      "pronunciation": {
+        "uk": "/brat/",
+        "us": "/bræt/",
+        "audio": {
+          "uk": "assets/audio/brat-uk.mp3",
+          "us": "assets/audio/brat-us.mp3"
+        }
+      },
+      "firstRecorded": {
+        "en": "Old English (before 1150)",
+        "zh": "古英语时期（公元1150年前）"
+      },
       "trendingPeriod": "2024",
       "numberOfSenses": 7,
-      "trendingSense": "自信独立者 | Confident, Independent Person or Attitude",
-      "examples": [
-        "She's such a brat summer vibes person.",
-        "Living my brat life unapologetically."
+      "senses": [
+        {
+          "type": "trending",
+          "title": {
+            "en": "Trending Sense",
+            "zh": "流行义"
+          },
+          "label": {
+            "en": "Confident, Independent Person or Attitude",
+            "zh": "自信独立者"
+          },
+          "definition": {
+            "en": "A confident, independent, and unapologetic person or attitude; a \"brat\" aesthetic representing freedom, authenticity, and rebellion.",
+            "zh": "指一种自信、独立、无拘无束的个体或态度；体现\"brat风格\"所代表的自由、真实与反叛精神。"
+          },
+          "examples": [
+            {
+              "year": 2024,
+              "sentence": {
+                "en": "To be a brat is to be confident and unapologetic, yes, but it also means allowing yourself to be vulnerable, to feel all your feelings and express them in ways that can be messy, vulnerable, bratty.",
+                "zh": "\"做一个 brat\"意味着要自信且毫不道歉，但同时也意味着允许自己脆弱，去真实地感受并表达情绪——哪怕这种表达是混乱的、敏感的、带点\"brat\"意味的。"
+              },
+              "source": {
+                "author": "Gwen Tam",
+                "title": "BRAT: a shiny, lime green breakdown",
+                "url": "https://berkeleybside.com/brat-a-shiny-lime-green-breakdown/"
+              },
+              "keyword": "brat",
+              "keywordPosition": {
+                "start": 5,
+                "end": 9
+              }
+            }
+          ],
+          "etymology": null
+        },
+        {
+          "type": "common",
+          "title": {
+            "en": "Common Modern Sense",
+            "zh": "现代主流义"
+          },
+          "subsenses": [
+            {
+              "label": {
+                "en": "Spoiled or Mischievous Child",
+                "zh": "被宠坏的孩子"
+              },
+              "definition": {
+                "en": "(Usually derogatory) A child, especially one who is ill-mannered, annoying, or spoiled.",
+                "zh": "（常作贬义）指无礼、顽皮或被宠坏的孩子。"
+              },
+              "examples": [
+                {
+                  "year": 2021,
+                  "sentence": {
+                    "en": "Just because they aren't behaving like unruly brats in the grocery store...doesn't mean they are scared.",
+                    "zh": "他们在超市里没有像顽劣小孩那样胡闹，并不意味着他们感到害怕。"
+                  },
+                  "source": {
+                    "author": "Amish Hackers",
+                    "title": "The Technium",
+                    "url": "https://kk.org/thetechnium/amish-hackers-a/"
+                  },
+                  "keyword": "brats",
+                  "keywordPosition": {
+                    "start": 43,
+                    "end": 48
+                  }
+                },
+                {
+                  "year": 2020,
+                  "sentence": {
+                    "en": "Cartoonist Damien Glez from Burkina Faso sees the president as a little brat who wants to get his way, no matter the cost.",
+                    "zh": "来自布基纳法索的漫画家达米安·格莱兹（Damien Glez）认为，这位总统就像个任性的小孩，无论代价多大都要按自己的意愿行事。"
+                  },
+                  "source": {
+                    "author": "Ines Pohl",
+                    "title": "Florida woman wants 4 more years of Trump",
+                    "url": "https://www.dw.com/en/a-florida-latina-wants-to-give-donald-trump-4-more-years/a-55378721"
+                  },
+                  "keyword": "brat",
+                  "keywordPosition": {
+                    "start": 72,
+                    "end": 76
+                  }
+                }
+              ]
+            },
+            {
+              "label": {
+                "en": "Child of a Person in a Specific Profession",
+                "zh": "某特定职业家庭的子女"
+              },
+              "definition": {
+                "en": "(By extension) The child of a person in a specific and often mobile profession (e.g. army brat, Hollywood brat).",
+                "zh": "（引申义）指特定职业家庭的子女，尤其是流动性较大的职业，如\"军人子弟\"（army brat）或\"明星子女\"（Hollywood brat）。"
+              },
+              "examples": []
+            }
+          ],
+          "etymology": {
+            "en": "The origin of brat (Modern Common Sense) is uncertain. Nineteenth-century etymologists Wedgwood, E. Müller, and Skeat suggested that it might originally meant a coarse garment or rag. However, editors of the Oxford English Dictionary note that no historical evidence has been found to confirm a semantic transition from \"cloth\" to \"child.\"",
+            "zh": "brat（现代主流义）词源不确定。十九世纪语言学家 Wedgwood、E. Müller 与Skeat 认为该词义可能源自\"衣物\"义。但《牛津英语词典》指出，目前尚无确切证据表明该词经历了由\"衣物\"义向\"孩子\"义的语义演变。"
+          }
+        },
+        {
+          "type": "other",
+          "title": {
+            "en": "Other Senses",
+            "zh": "其他义"
+          },
+          "subsenses": [
+            {
+              "label": {
+                "en": "Coarse Garment or Rag (Obsolete)",
+                "zh": "粗布织物（已废弃）"
+              },
+              "definition": {
+                "en": "Originally, brat meant a cloth or outer garment, especially one made of coarse or makeshift material; later used for \"apron\", \"pinafore,\" or contemptuously for \"rag.\"",
+                "zh": "最初，brat 指一种粗布制成的外衣或披巾；后来在方言中也用作\"围裙、罩衫\"，或轻蔑地指\"破布\"。"
+              },
+              "examples": [
+                {
+                  "year": 1962,
+                  "sentence": {
+                    "en": "I had put on the chequered overall known locally as a \"brat.\"",
+                    "zh": "我穿上了那件当地人称作\"brat\"的格子罩衫。"
+                  },
+                  "source": {
+                    "author": "John Boynton Priestley",
+                    "title": "Margin Released. A writer's reminiscences and reflections",
+                    "url": ""
+                  },
+                  "keyword": "brat",
+                  "keywordPosition": {
+                    "start": 49,
+                    "end": 53
+                  }
+                }
+              ],
+              "etymology": {
+                "en": "Of Celtic origin. Old English (Northumbrian) bratt was probably borrowed from Old Irish brat(t), meaning \"cloth\" or \"mantle.\"",
+                "zh": "源自凯尔特语。古英语（诺森布里亚方言）bratt 可能借自古爱尔兰语的brat(t)，意为\"布料\"或\"披巾\"。"
+              }
+            },
+            {
+              "label": {
+                "en": "A Fish",
+                "zh": "一种鱼类"
+              },
+              "definition": {
+                "en": "A fish: the turbot, birt, or bret.",
+                "zh": "指多宝鱼、鲽鱼或鲆鱼。"
+              },
+              "examples": []
+            },
+            {
+              "label": {
+                "en": "Thin Bed of Coal (Mining Term)",
+                "zh": "薄煤层（采矿术语）"
+              },
+              "definition": {
+                "en": "A thin bed of coal mixed with pyrites or carbonate of lime.",
+                "zh": "采矿术语，指含黄铁矿或碳酸钙的薄煤层。"
+              },
+              "examples": []
+            },
+            {
+              "label": {
+                "en": "German Sausage (U.S. Regional)",
+                "zh": "德式香肠（美国方言）"
+              },
+              "definition": {
+                "en": "Short for bratwurst; a German-style sausage, especially common in the U.S. Midwest.",
+                "zh": "bratwurst 的缩略形式，指德式香肠，在美国中西部方言中尤为常见。"
+              },
+              "examples": []
+            }
+          ]
+        }
       ],
-      "etymology": "Originally meaning a badly behaved child, recently reclaimed to represent confident, unapologetic attitude popularized by Charli XCX's album 'Brat'.",
       "frequencyData": [
         {"year": 2020, "count": 150},
         {"year": 2021, "count": 300},
@@ -21,28 +213,95 @@
         {"year": 2023, "count": 2500},
         {"year": 2024, "count": 15000}
       ],
-      "history": "The term 'brat' has undergone a significant semantic shift in 2024. Originally a negative term for a spoiled child, it was reclaimed by pop culture, particularly through Charli XCX's album 'Brat', to represent confidence, authenticity, and unapologetic self-expression. The 'brat summer' phenomenon became a global cultural movement celebrating messy, authentic living.",
-      "source": "《2024年全球流行语报告》",
-      "thesaurus": [
-        {"leftContext": "She's living her", "word": "brat", "rightContext": "summer lifestyle", "link": "#brat-summer"},
-        {"leftContext": "That's so", "word": "brat", "rightContext": "of you to say", "link": "#brat-attitude"},
-        {"leftContext": "Embrace your inner", "word": "brat", "rightContext": "energy", "link": "#brat-energy"}
-      ]
+      "history": {
+        "en": "The term 'brat' has undergone a significant semantic shift in 2024. Originally a negative term for a spoiled child, it was reclaimed by pop culture, particularly through Charli XCX's album 'Brat', to represent confidence, authenticity, and unapologetic self-expression. The 'brat summer' phenomenon became a global cultural movement celebrating messy, authentic living.",
+        "zh": "\"brat\"一词在2024年经历了显著的语义转变。原本是指被宠坏的孩子的贬义词，在流行文化中被重新定义，特别是通过Charli XCX的专辑《Brat》，代表自信、真实和毫不掩饰的自我表达。\"brat summer\"现象成为全球文化运动，庆祝混乱而真实的生活方式。"
+      },
+      "source": {
+        "en": "Global Buzzwords Report 2024",
+        "zh": "《2024年全球流行语报告》"
+      },
+      "relatedTerms": ["aesthetic", "confidence", "authenticity", "rebellion"]
     },
     "yyds": {
       "headword": "YYDS",
-      "language": "Chinese | 中文",
-      "partOfSpeech": "abbreviation | 缩写",
-      "pronunciation": "yǒng yuǎn de shén",
-      "firstRecorded": "2020年电竞直播",
+      "language": {
+        "en": "Chinese",
+        "zh": "中文"
+      },
+      "partOfSpeech": {
+        "en": "abbreviation",
+        "zh": "缩写"
+      },
+      "pronunciation": {
+        "pinyin": "yǒng yuǎn de shén",
+        "audio": {
+          "zh": "assets/audio/yyds-zh.mp3"
+        }
+      },
+      "firstRecorded": {
+        "en": "2020, E-sports live streaming",
+        "zh": "2020年电竞直播"
+      },
       "trendingPeriod": "2021-2022",
       "numberOfSenses": 2,
-      "trendingSense": "永远的神 | Forever the GOAT",
-      "examples": [
-        "这个操作YYDS！",
-        "王者荣耀YYDS！"
+      "senses": [
+        {
+          "type": "trending",
+          "title": {
+            "en": "Trending Sense",
+            "zh": "流行义"
+          },
+          "label": {
+            "en": "Forever the GOAT",
+            "zh": "永远的神"
+          },
+          "definition": {
+            "en": "An internet slang abbreviation meaning 'forever the greatest' or 'GOAT (Greatest Of All Time)', used to express extreme admiration or praise.",
+            "zh": "网络流行语缩写，表示\"永远的神\"或\"史上最强\"，用于表达极度的赞美和崇拜。"
+          },
+          "examples": [
+            {
+              "year": 2021,
+              "sentence": {
+                "en": "This operation is YYDS! (Zhe ge cao zuo YYDS!)",
+                "zh": "这个操作YYDS！"
+              },
+              "source": {
+                "author": "Social Media User",
+                "title": "Gaming Forum Discussion",
+                "url": ""
+              },
+              "keyword": "YYDS",
+              "keywordPosition": {
+                "start": 18,
+                "end": 22
+              }
+            },
+            {
+              "year": 2022,
+              "sentence": {
+                "en": "Honor of Kings, YYDS! (Wang zhe rong yao YYDS!)",
+                "zh": "王者荣耀YYDS！"
+              },
+              "source": {
+                "author": "Gaming Community",
+                "title": "Mobile Gaming Platform",
+                "url": ""
+              },
+              "keyword": "YYDS",
+              "keywordPosition": {
+                "start": 6,
+                "end": 10
+              }
+            }
+          ],
+          "etymology": {
+            "en": "Originally emerged from Chinese e-sports commentary, where commentators used it to praise exceptional player performance. It quickly spread to social media platforms and became a universal expression of admiration.",
+            "zh": "最初出现在中国电竞解说中，解说员用来赞美选手的精彩操作。随后迅速传播到各大社交平台，成为表达赞美的万能用语。"
+          }
+        }
       ],
-      "etymology": "网络流行语，源于电竞解说，表示对某人或某事物的极度赞美",
       "frequencyData": [
         {"year": 2020, "count": 1000},
         {"year": 2021, "count": 50000},
@@ -50,28 +309,95 @@
         {"year": 2023, "count": 15000},
         {"year": 2024, "count": 8000}
       ],
-      "history": "YYDS最初出现在电竞直播间，由游戏解说员用来形容选手的精彩操作。随后迅速传播到各大社交平台，成为表达赞美和崇拜的万能用语。",
-      "source": "《中国网络流行语发展报告2021》",
-      "thesaurus": [
-        {"leftContext": "这波操作", "word": "YYDS", "rightContext": "！", "link": "#gaming"},
-        {"leftContext": "我的偶像", "word": "YYDS", "rightContext": "💪", "link": "#idol"},
-        {"leftContext": "今天的表现", "word": "YYDS", "rightContext": "👍", "link": "#performance"}
-      ]
+      "history": {
+        "en": "YYDS first appeared in e-sports live streaming rooms in 2020, used by game commentators to describe amazing plays. It then rapidly propagated across social media platforms, becoming a universal term of praise and admiration in Chinese internet culture.",
+        "zh": "YYDS最初出现在2020年的电竞直播间，由游戏解说员用来形容精彩操作。随后迅速传播到各大社交平台，成为中国网络文化中表达赞美和崇拜的万能词汇。"
+      },
+      "source": {
+        "en": "Chinese Internet Slang Development Report 2021",
+        "zh": "《中国网络流行语发展报告2021》"
+      },
+      "relatedTerms": ["GOAT", "绝绝子", "666", "牛逼"]
     },
     "躺平": {
       "headword": "躺平",
-      "language": "Chinese | 中文",
-      "partOfSpeech": "verb/lifestyle | 动词/生活方式",
-      "pronunciation": "tǎng píng",
-      "firstRecorded": "2021年网络论坛",
+      "language": {
+        "en": "Chinese",
+        "zh": "中文"
+      },
+      "partOfSpeech": {
+        "en": "verb/lifestyle concept",
+        "zh": "动词/生活方式"
+      },
+      "pronunciation": {
+        "pinyin": "tǎng píng",
+        "audio": {
+          "zh": "assets/audio/tangping-zh.mp3"
+        }
+      },
+      "firstRecorded": {
+        "en": "2021, Chinese internet forums",
+        "zh": "2021年网络论坛"
+      },
       "trendingPeriod": "2021-2023",
       "numberOfSenses": 3,
-      "trendingSense": "低欲望生活态度 | Low-desire lifestyle attitude",
-      "examples": [
-        "我选择躺平，不再内卷。",
-        "躺平是一种生活智慧。"
+      "senses": [
+        {
+          "type": "trending",
+          "title": {
+            "en": "Trending Sense",
+            "zh": "流行义"
+          },
+          "label": {
+            "en": "Low-desire Lifestyle Attitude",
+            "zh": "低欲望生活态度"
+          },
+          "definition": {
+            "en": "A lifestyle philosophy of rejecting societal pressure for constant striving and success, choosing instead to live with minimal material desires and reduced ambition.",
+            "zh": "表示不再奋斗，以最低标准生活的消极态度，反映年轻人面对竞争压力的一种回应。"
+          },
+          "examples": [
+            {
+              "year": 2021,
+              "sentence": {
+                "en": "I choose to lie flat and no longer engage in the rat race. (Wo xuan ze tang ping, bu zai nei juan.)",
+                "zh": "我选择躺平，不再内卷。"
+              },
+              "source": {
+                "author": "Social Media Discussion",
+                "title": "Online Forum",
+                "url": ""
+              },
+              "keyword": "躺平",
+              "keywordPosition": {
+                "start": 3,
+                "end": 5
+              }
+            },
+            {
+              "year": 2022,
+              "sentence": {
+                "en": "Lying flat is a form of life wisdom. (Tang ping shi yi zhong sheng huo zhi hui.)",
+                "zh": "躺平是一种生活智慧。"
+              },
+              "source": {
+                "author": "Lifestyle Blog",
+                "title": "Modern Living Philosophy",
+                "url": ""
+              },
+              "keyword": "躺平",
+              "keywordPosition": {
+                "start": 0,
+                "end": 2
+              }
+            }
+          ],
+          "etymology": {
+            "en": "The term originated from online forums where young people discussed their frustration with intense social competition and pressure. It represents a passive resistance to the 'involution' (内卷) culture.",
+            "zh": "该词最初出现在网络论坛，表达年轻人对激烈竞争和高压生活的消极抵抗。这一概念迅速引发社会讨论，成为反思现代生活方式的重要话题。"
+          }
+        }
       ],
-      "etymology": "表示不再奋斗，以最低标准生活的消极态度，反映年轻人面对竞争压力的一种回应",
       "frequencyData": [
         {"year": 2020, "count": 50},
         {"year": 2021, "count": 25000},
@@ -79,28 +405,95 @@
         {"year": 2023, "count": 12000},
         {"year": 2024, "count": 8000}
       ],
-      "history": "躺平一词最初出现在网络论坛，表达年轻人对激烈竞争和高压生活的消极抵抗。这一概念迅速引发社会讨论，成为反思现代生活方式的重要话题。",
-      "source": "《中国社会心理学研究报告2022》",
-      "thesaurus": [
-        {"leftContext": "选择", "word": "躺平", "rightContext": "过简单生活", "link": "#simple-life"},
-        {"leftContext": "不想", "word": "躺平", "rightContext": "了", "link": "#giving-up"},
-        {"leftContext": "年轻人开始", "word": "躺平", "rightContext": "现象", "link": "#youth-culture"}
-      ]
+      "history": {
+        "en": "The term 'lying flat' first appeared in internet forums in 2021, expressing young people's passive resistance to intense competition and high-pressure living. This concept quickly sparked social discussion and became an important topic for reflecting on modern lifestyles.",
+        "zh": "躺平一词最初出现在2021年的网络论坛，表达年轻人对激烈竞争和高压生活的消极抵抗。这一概念迅速引发社会讨论，成为反思现代生活方式的重要话题。"
+      },
+      "source": {
+        "en": "Chinese Social Psychology Research Report 2022",
+        "zh": "《中国社会心理学研究报告2022》"
+      },
+      "relatedTerms": ["内卷", "佛系", "低欲望", "minimalism"]
     },
     "内卷": {
       "headword": "内卷",
-      "language": "Chinese | 中文",
-      "partOfSpeech": "noun/verb | 名词/动词",
-      "pronunciation": "nèi juǎn",
-      "firstRecorded": "学术术语，2020年网络流行",
+      "language": {
+        "en": "Chinese",
+        "zh": "中文"
+      },
+      "partOfSpeech": {
+        "en": "noun/verb",
+        "zh": "名词/动词"
+      },
+      "pronunciation": {
+        "pinyin": "nèi juǎn",
+        "audio": {
+          "zh": "assets/audio/neijuan-zh.mp3"
+        }
+      },
+      "firstRecorded": {
+        "en": "Academic term, popularized online in 2020",
+        "zh": "学术术语，2020年网络流行"
+      },
       "trendingPeriod": "2020-2022",
       "numberOfSenses": 2,
-      "trendingSense": "过度竞争 | Excessive competition",
-      "examples": [
-        "职场内卷太严重了。",
-        "教育内卷让孩子压力很大。"
+      "senses": [
+        {
+          "type": "trending",
+          "title": {
+            "en": "Trending Sense",
+            "zh": "流行义"
+          },
+          "label": {
+            "en": "Excessive Competition",
+            "zh": "过度竞争"
+          },
+          "definition": {
+            "en": "Excessive internal competition leading to diminishing returns; a situation where increased effort does not lead to proportional improvements in outcomes.",
+            "zh": "原为人类学术语，指社会发展陷入停滞状态，网络流行后多指过度竞争和恶性竞争。"
+          },
+          "examples": [
+            {
+              "year": 2021,
+              "sentence": {
+                "en": "Workplace involution is too serious. (Zhi chang nei juan tai yan zhong le.)",
+                "zh": "职场内卷太严重了。"
+              },
+              "source": {
+                "author": "Workplace Discussion",
+                "title": "Professional Forum",
+                "url": ""
+              },
+              "keyword": "内卷",
+              "keywordPosition": {
+                "start": 2,
+                "end": 4
+              }
+            },
+            {
+              "year": 2022,
+              "sentence": {
+                "en": "Educational involution puts enormous pressure on children. (Jiao yu nei juan rang hai zi ya li hen da.)",
+                "zh": "教育内卷让孩子压力很大。"
+              },
+              "source": {
+                "author": "Education News",
+                "title": "Parenting Magazine",
+                "url": ""
+              },
+              "keyword": "内卷",
+              "keywordPosition": {
+                "start": 2,
+                "end": 4
+              }
+            }
+          ],
+          "etymology": {
+            "en": "Originally an anthropological concept describing societal stagnation. In internet usage, it evolved to describe excessive competition and diminishing returns in modern competitive environments.",
+            "zh": "原本是人类学概念，描述社会停滞现象。在网络传播中，逐渐演变为形容过度竞争、恶性竞争的流行语，反映了现代社会竞争压力。"
+          }
+        }
       ],
-      "etymology": "原为人类学术语，指社会发展陷入停滞状态，网络流行后多指过度竞争和恶性竞争",
       "frequencyData": [
         {"year": 2019, "count": 100},
         {"year": 2020, "count": 8000},
@@ -109,13 +502,15 @@
         {"year": 2023, "count": 20000},
         {"year": 2024, "count": 15000}
       ],
-      "history": "内卷原本是人类学概念，描述社会停滞现象。在网络传播中，逐渐演变为形容过度竞争、恶性竞争的流行语，反映了现代社会竞争压力。",
-      "source": "《网络流行语社会学分析2021》",
-      "thesaurus": [
-        {"leftContext": "职场", "word": "内卷", "rightContext": "现象严重", "link": "#workplace"},
-        {"leftContext": "教育", "word": "内卷", "rightContext": "问题", "link": "#education"},
-        {"leftContext": "避免", "word": "内卷", "rightContext": "竞争", "link": "#competition"}
-      ]
+      "history": {
+        "en": "Involution was originally an anthropological concept describing societal stagnation. During internet propagation, it gradually evolved into a buzzword describing excessive competition and malicious competition, reflecting the competitive pressures of modern society.",
+        "zh": "内卷原本是人类学概念，描述社会停滞现象。在网络传播中，逐渐演变为形容过度竞争、恶性竞争的流行语，反映了现代社会竞争压力。"
+      },
+      "source": {
+        "en": "Sociological Analysis of Internet Buzzwords 2021",
+        "zh": "《网络流行语社会学分析2021》"
+      },
+      "relatedTerms": ["躺平", "内耗", "竞争", "involution"]
     }
   }
 }

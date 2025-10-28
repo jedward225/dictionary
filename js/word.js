@@ -2,6 +2,7 @@ class BuzzwordDisplay {
     constructor() {
         this.buzzwordData = null;
         this.frequencyChart = null;
+        this.currentLang = 'zh'; // 默认显示中文，可以根据需要切换
         this.init();
     }
 
@@ -35,66 +36,338 @@ class BuzzwordDisplay {
         this.setupTabs();
     }
 
+    // 获取多语言文本
+    getText(field, lang = this.currentLang) {
+        if (typeof field === 'string') {
+            return field;
+        }
+        if (typeof field === 'object' && field !== null) {
+            return field[lang] || field['zh'] || field['en'] || '';
+        }
+        return '';
+    }
+
+    // 格式化发音信息
+    formatPronunciation(pronunciation) {
+        const parts = [];
+
+        // 英语发音
+        if (pronunciation.uk) {
+            parts.push(`英 ${pronunciation.uk}`);
+        }
+        if (pronunciation.us) {
+            parts.push(`美 ${pronunciation.us}`);
+        }
+
+        // 中文发音
+        if (pronunciation.pinyin) {
+            parts.push(pronunciation.pinyin);
+        }
+
+        // 国际音标（通用）
+        if (pronunciation.ipa && !pronunciation.uk && !pronunciation.us) {
+            parts.push(`IPA ${pronunciation.ipa}`);
+        }
+
+        // 罗马化拼写（俄语、韩语等）
+        if (pronunciation.romanization) {
+            parts.push(pronunciation.romanization);
+        }
+
+        // 日语发音
+        if (pronunciation.romaji) {
+            parts.push(pronunciation.romaji);
+        }
+        if (pronunciation.hiragana) {
+            parts.push(pronunciation.hiragana);
+        }
+
+        // 韩语发音
+        if (pronunciation.hangul) {
+            parts.push(pronunciation.hangul);
+        }
+
+        return parts.join(' ') || 'No pronunciation available';
+    }
+
     displayBuzzwordData(data) {
         // 更新页面标题和头部
         document.getElementById('headword').textContent = data.headword;
-        document.getElementById('pronunciation').textContent = data.pronunciation;
+        const pronunciationText = this.formatPronunciation(data.pronunciation);
+        document.getElementById('pronunciation').textContent = pronunciationText;
+
+        // 添加音频播放按钮（如果有音频）
+        this.addAudioPlayer(data.pronunciation.audio);
 
         // 更新档案信息
-        document.getElementById('info-headword').textContent = data.headword;
-        document.getElementById('info-language').textContent = data.language;
-        document.getElementById('info-pos').textContent = data.partOfSpeech;
-        document.getElementById('info-pronunciation').textContent = data.pronunciation;
-        document.getElementById('info-first-recorded').textContent = data.firstRecorded;
-        document.getElementById('info-trending').textContent = data.trendingPeriod;
-        document.getElementById('info-senses').textContent = data.numberOfSenses;
+        this.updateInfoSheet(data);
 
-        // 更新定义
-        document.getElementById('trending-sense').textContent = data.trendingSense;
-        document.getElementById('etymology').textContent = data.etymology;
-
-        // 更新例句
-        this.updateExamples(data.examples);
+        // 更新定义（显示所有义项）
+        this.updateDefinition(data.senses);
 
         // 更新历史
-        document.getElementById('history-content').textContent = data.history;
-        document.getElementById('history-source').textContent = data.source;
+        document.getElementById('history-content').textContent = this.getText(data.history);
+        document.getElementById('history-source').textContent = this.getText(data.source);
 
         // 更新相关词汇
-        this.updateThesaurus(data.thesaurus);
+        this.updateRelatedTerms(data.relatedTerms, data.senses);
 
         // 创建词频图表
         this.createFrequencyChart(data.frequencyData);
     }
 
-    updateExamples(examples) {
-        const examplesList = document.getElementById('examples-list');
-        examplesList.innerHTML = '';
-        examples.forEach(example => {
-            const li = document.createElement('li');
-            li.textContent = example;
-            li.className = 'text-gray-300';
-            examplesList.appendChild(li);
+    updateInfoSheet(data) {
+        document.getElementById('info-headword').textContent = data.headword;
+        document.getElementById('info-language').textContent =
+            `${this.getText(data.language, 'en')} | ${this.getText(data.language, 'zh')}`;
+        document.getElementById('info-pos').textContent =
+            `${this.getText(data.partOfSpeech, 'en')} | ${this.getText(data.partOfSpeech, 'zh')}`;
+        document.getElementById('info-pronunciation').textContent =
+            this.formatPronunciation(data.pronunciation);
+        document.getElementById('info-first-recorded').textContent =
+            this.getText(data.firstRecorded);
+        document.getElementById('info-trending').textContent = data.trendingPeriod;
+        document.getElementById('info-senses').textContent = data.numberOfSenses;
+    }
+
+    updateDefinition(senses) {
+        const container = document.getElementById('definition');
+        container.innerHTML = '<h3 class="text-3xl font-bold mb-6 text-cyan-400">定义 | Definition</h3>';
+
+        senses.forEach((sense, index) => {
+            const senseDiv = document.createElement('div');
+            senseDiv.className = 'mb-8 pb-6 border-b border-white/10';
+
+            // 义项标题
+            const titleDiv = document.createElement('div');
+            titleDiv.className = 'mb-4';
+            titleDiv.innerHTML = `
+                <h4 class="text-2xl font-semibold text-cyan-400">${this.getText(sense.title)}</h4>
+                <p class="text-xl text-cyan-300 mt-1">${this.getText(sense.label)}</p>
+            `;
+            senseDiv.appendChild(titleDiv);
+
+            // 定义
+            if (sense.definition) {
+                const defDiv = document.createElement('div');
+                defDiv.className = 'mb-4';
+                defDiv.innerHTML = `
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        <span class="text-cyan-400 font-semibold">EN:</span> ${this.getText(sense.definition, 'en')}
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed mt-2">
+                        <span class="text-cyan-400 font-semibold">ZH:</span> ${this.getText(sense.definition, 'zh')}
+                    </p>
+                `;
+                senseDiv.appendChild(defDiv);
+            }
+
+            // 处理子义项
+            if (sense.subsenses && sense.subsenses.length > 0) {
+                sense.subsenses.forEach((subsense, subIndex) => {
+                    const subsenseDiv = document.createElement('div');
+                    subsenseDiv.className = 'ml-4 mb-4 pl-4 border-l-2 border-cyan-500';
+                    subsenseDiv.innerHTML = `
+                        <p class="text-xl text-cyan-300 font-semibold mb-2">
+                            (${String.fromCharCode(97 + subIndex)}) ${this.getText(subsense.label)}
+                        </p>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            <span class="text-cyan-400 font-semibold">EN:</span> ${this.getText(subsense.definition, 'en')}
+                        </p>
+                        <p class="text-lg text-gray-300 leading-relaxed mt-1">
+                            <span class="text-cyan-400 font-semibold">ZH:</span> ${this.getText(subsense.definition, 'zh')}
+                        </p>
+                    `;
+
+                    // 添加子义项的例句
+                    if (subsense.examples && subsense.examples.length > 0) {
+                        subsenseDiv.appendChild(this.createExamplesSection(subsense.examples));
+                    }
+
+                    senseDiv.appendChild(subsenseDiv);
+                });
+            }
+
+            // 添加例句（针对顶级义项）
+            if (sense.examples && sense.examples.length > 0) {
+                senseDiv.appendChild(this.createExamplesSection(sense.examples));
+            }
+
+            // 词源
+            if (sense.etymology) {
+                const etymDiv = document.createElement('div');
+                etymDiv.className = 'mt-4 p-4 bg-blue-900/20 rounded-lg';
+                etymDiv.innerHTML = `
+                    <h5 class="text-xl font-semibold text-blue-400 mb-3">Etymology | 词源</h5>
+                    <p class="text-lg text-gray-300 leading-relaxed">
+                        <span class="text-blue-400 font-semibold">EN:</span> ${this.getText(sense.etymology, 'en')}
+                    </p>
+                    <p class="text-lg text-gray-300 leading-relaxed mt-2">
+                        <span class="text-blue-400 font-semibold">ZH:</span> ${this.getText(sense.etymology, 'zh')}
+                    </p>
+                `;
+                senseDiv.appendChild(etymDiv);
+            }
+
+            container.appendChild(senseDiv);
         });
     }
 
-    updateThesaurus(thesaurusData) {
+    createExamplesSection(examples) {
+        const examplesDiv = document.createElement('div');
+        examplesDiv.className = 'mt-4';
+        examplesDiv.innerHTML = '<h5 class="text-xl font-semibold text-cyan-400 mb-3">Examples 例句</h5>';
+
+        examples.forEach((example) => {
+            const exampleItem = document.createElement('div');
+            exampleItem.className = 'mb-4 p-4 bg-white/5 rounded-lg';
+
+            const enSentence = this.getText(example.sentence, 'en');
+            const zhSentence = this.getText(example.sentence, 'zh');
+
+            // 高亮关键词
+            const highlightedEn = this.highlightKeyword(
+                enSentence,
+                example.keyword,
+                example.keywordPosition
+            );
+
+            exampleItem.innerHTML = `
+                <p class="text-base text-gray-400 mb-2">${example.year}</p>
+                <p class="text-lg text-gray-300 leading-relaxed mb-2">${highlightedEn}</p>
+                <p class="text-base text-gray-400 leading-relaxed italic mb-2">译文：${zhSentence}</p>
+                ${example.source && example.source.author ? `
+                    <p class="text-sm text-blue-400">
+                        — ${example.source.author}${example.source.title ? `. ${example.source.title}` : ''}
+                        ${example.source.url ? `<a href="${example.source.url}" target="_blank" class="ml-1 hover:text-blue-300">🔗</a>` : ''}
+                    </p>
+                ` : ''}
+            `;
+
+            examplesDiv.appendChild(exampleItem);
+        });
+
+        return examplesDiv;
+    }
+
+    highlightKeyword(sentence, keyword, position) {
+        if (!position || !keyword) {
+            return sentence;
+        }
+
+        const before = sentence.substring(0, position.start);
+        const word = sentence.substring(position.start, position.end);
+        const after = sentence.substring(position.end);
+
+        return `${before}<span class="font-bold text-cyan-300 bg-cyan-500/20 px-1 rounded">${word}</span>${after}`;
+    }
+
+    updateRelatedTerms(relatedTerms, senses) {
         const container = document.getElementById('thesaurus-content');
         container.innerHTML = '';
 
-        thesaurusData.forEach((item) => {
-            const div = document.createElement('div');
-            div.className = 'p-4 bg-white/5 rounded-lg border border-white/10';
-            div.innerHTML = `
-                <div class="flex items-center space-x-2 text-lg">
-                    <span class="text-gray-400">${item.leftContext}</span>
-                    <span class="font-bold text-cyan-300 px-2 py-1 bg-cyan-500/20 rounded">${item.word}</span>
-                    <span class="text-gray-400">${item.rightContext}</span>
-                    ${item.link ? `<a href="${item.link}" class="text-blue-400 hover:text-blue-300 ml-2">🔗</a>` : ''}
-                </div>
-            `;
-            container.appendChild(div);
+        if (!relatedTerms || relatedTerms.length === 0) {
+            container.innerHTML = '<p class="text-gray-400">暂无相关词汇</p>';
+            return;
+        }
+
+        // 显示相关词汇标签
+        const tagsDiv = document.createElement('div');
+        tagsDiv.className = 'mb-6';
+        tagsDiv.innerHTML = '<h4 class="text-2xl font-semibold text-cyan-400 mb-4">相关词汇 | Related Terms</h4>';
+
+        const tagContainer = document.createElement('div');
+        tagContainer.className = 'flex flex-wrap gap-3';
+
+        relatedTerms.forEach(term => {
+            const tag = document.createElement('span');
+            tag.className = 'px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-base';
+            tag.textContent = term;
+            tagContainer.appendChild(tag);
         });
+
+        tagsDiv.appendChild(tagContainer);
+        container.appendChild(tagsDiv);
+
+        // 从所有义项中提取例句作为语境展示
+        const examplesDiv = document.createElement('div');
+        examplesDiv.innerHTML = '<h4 class="text-2xl font-semibold text-cyan-400 mb-4 mt-8">语境示例 | Contextual Examples</h4>';
+
+        let allExamples = [];
+        senses.forEach(sense => {
+            if (sense.examples) {
+                allExamples = allExamples.concat(sense.examples);
+            }
+            if (sense.subsenses) {
+                sense.subsenses.forEach(subsense => {
+                    if (subsense.examples) {
+                        allExamples = allExamples.concat(subsense.examples);
+                    }
+                });
+            }
+        });
+
+        // 显示最多5个例句
+        allExamples.slice(0, 5).forEach(example => {
+            const contextDiv = document.createElement('div');
+            contextDiv.className = 'p-5 bg-white/5 rounded-lg border border-white/10 mb-4';
+
+            // 提取上下文
+            const sentence = this.getText(example.sentence, 'en');
+            const leftContext = sentence.substring(0, example.keywordPosition?.start || 0);
+            const word = example.keyword;
+            const rightContext = sentence.substring(example.keywordPosition?.end || sentence.length);
+
+            contextDiv.innerHTML = `
+                <div class="flex items-center space-x-2 text-lg mb-3">
+                    <span class="text-gray-300">${leftContext}</span>
+                    <span class="font-bold text-cyan-300 px-2 py-1 bg-cyan-500/20 rounded">${word}</span>
+                    <span class="text-gray-300">${rightContext}</span>
+                </div>
+                <p class="text-sm text-gray-400 mt-2">${example.year} - ${example.source?.title || 'Source'}</p>
+            `;
+
+            examplesDiv.appendChild(contextDiv);
+        });
+
+        container.appendChild(examplesDiv);
+    }
+
+    addAudioPlayer(audio) {
+        if (!audio) return;
+
+        const pronunciationEl = document.getElementById('pronunciation');
+        const audioDiv = document.createElement('div');
+        audioDiv.className = 'mt-2 flex gap-2';
+
+        if (audio.uk) {
+            audioDiv.innerHTML += `
+                <button onclick="new Audio('${audio.uk}').play()"
+                        class="text-xs bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 px-3 py-1 rounded-full transition-colors">
+                    🔊 UK
+                </button>
+            `;
+        }
+
+        if (audio.us) {
+            audioDiv.innerHTML += `
+                <button onclick="new Audio('${audio.us}').play()"
+                        class="text-xs bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 px-3 py-1 rounded-full transition-colors">
+                    🔊 US
+                </button>
+            `;
+        }
+
+        if (audio.zh) {
+            audioDiv.innerHTML += `
+                <button onclick="new Audio('${audio.zh}').play()"
+                        class="text-xs bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 px-3 py-1 rounded-full transition-colors">
+                    🔊 中文
+                </button>
+            `;
+        }
+
+        pronunciationEl.appendChild(audioDiv);
     }
 
     show404() {

@@ -51,6 +51,54 @@ body.index-page {
     transition: opacity 0.3s ease-in-out;
 }
 
+/* Logo样式 - 去除白底 */
+.brain-logo {
+    mix-blend-mode: multiply;
+    filter: brightness(1.2);
+}
+
+/* 友情链接区域 */
+.footer-links {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: linear-gradient(to top, rgba(13, 26, 46, 0.95), transparent);
+    padding: 2rem 1rem 1rem;
+}
+
+.links-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.link-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.link-item:hover {
+    transform: translateY(-5px);
+}
+
+.link-logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+.copyright {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* 词条页面样式 */
 .tab-content {
     display: none;
@@ -58,6 +106,10 @@ body.index-page {
 
 .tab-content.active {
     display: block;
+}
+
+.tab-button {
+    font-size: 1.125rem; /* 增大tab按钮字体 */
 }
 
 .tab-button.active {
@@ -71,14 +123,16 @@ body.index-page {
 }
 
 .info-table td {
-    padding: 12px;
+    padding: 16px; /* 增大内边距 */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.125rem; /* 增大字体 */
 }
 
 .info-table td:first-child {
     font-weight: bold;
     color: #60a5fa;
-    width: 30%;
+    width: 35%;
+    font-size: 1.125rem; /* 增大字体 */
 }
 
 /* 响应式设计 */
